@@ -1,4 +1,4 @@
-package charlton.funfacts.funfacts;
+package charlton.java.javavocab;
 
 import org.junit.Test;
 

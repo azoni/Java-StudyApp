@@ -1,42 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="50dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:paddingTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
         android:id="@+id/relativelayout"
-        tools:context="charlton.funfacts.funfacts.FunFactsActivity"
-        android:background="#456051b4" >
-
-    <TextView
-        android:layout_width="wrap_content"
+        tools:context="charlton.java.javavocab.FunFactsActivity"
+        android:background="#3079ab" >
+    <ScrollView
+        android:id="@+id/Scroll"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Did you know?"
-        android:textSize="24sp"
-        android:textColor="#80ffffff"
-        android:id="@+id/textView"/>
-
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:clickable="false">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Ants stretch when they wake up in the morning"
+        android:text="Welcome to my Java \nstudy app!\n\nDon't like the background color? Just hit the Random Vocab Button and it will change!\n\nFeatures:\n\nVocab\n\nWhats the output\n\nMore coming soon!"
         android:id="@+id/factTextView"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textSize="24sp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"/>
+    </ScrollView>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random vocab"
+        android:id="@+id/ShowFactButton"
+        android:textColor="#1a40a9"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
     <Button
-        android:layout_width="match_parent"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Another Fun Fact"
-        android:id="@+id/ShowFactButton"
+        android:text=" Author "
+        android:id="@+id/Author"
+        android:layout_alignTop="@+id/Scroll"
+        android:layout_alignRight="@+id/Scroll"
+        android:layout_alignEnd="@+id/Scroll"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whats the output?"
+        android:id="@+id/Code"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#51b46d"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Quiz"
+        android:id="@+id/Quiz"
+        android:layout_alignBottom="@+id/Author"
+        android:layout_alignParentTop="true"
+        android:onClick="goToActivity2"
+        android:layout_toRightOf="@+id/Code"
+        android:layout_toLeftOf="@+id/Author"
+        android:layout_toStartOf="@+id/Author"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Chapter"
+        android:id="@+id/Chapters"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/Quiz"
+        android:layout_toStartOf="@+id/Quiz"/>
 
 </RelativeLayout>
